@@ -1,0 +1,9 @@
+{
+  "name": "jinny-chetting",
+  "dependencies": {
+    "erlpack": "^0.1.4",
+    "tmi.js": "^1.8.5",
+    "ws": "^8.5.0",
+    "zlib-sync": "^0.1.7"
+  }
+}
