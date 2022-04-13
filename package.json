@@ -1,5 +1,8 @@
 {
   "name": "jinny-chetting",
+  "version": "0.1.0",
+  "bin": "index.mjs",
+  "license": "MIT",
   "dependencies": {
     "erlpack": "^0.1.4",
     "tmi.js": "^1.8.5",
