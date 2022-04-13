@@ -12,7 +12,12 @@ import fs from 'fs';
 import tmi from 'tmi.js';
 import { format } from './message.mjs';
 
-const config = JSON.parse( await fs.promises.readFile('config.json'));
+let configFilename = 'config.json';
+
+if (process.argv.length >= 3) {
+  configFilename = process.argv[2];
+}
+const config = JSON.parse( await fs.promises.readFile(configFilename));
 
 const chat = new tmi.Client({
   options: { debug: true, messagesLogLevel: "info" },
