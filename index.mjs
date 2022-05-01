@@ -62,7 +62,7 @@ let last_create_message = 0;
 async function message_create(packet) {
   if ( Date.now() - last_create_message > config.message_wait) {
     last_create_message = Date.now();
-    const msg = format(packet.d.content, config.max_message_length?config.max_message_length:300);
+    const msg = format(packet.d.content, config.max_message_length?config.max_message_length:500);
     await chat.say(config.chat, msg);
   }
 }
