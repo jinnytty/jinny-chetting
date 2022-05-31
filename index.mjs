@@ -11,6 +11,7 @@ import erlpack from 'erlpack'; // github.com/discordapp/erlpack
 import fs from 'fs';
 import tmi from 'tmi.js';
 import { format } from './message.mjs';
+import util from 'util';
 
 let configFilename = 'config.json';
 
@@ -102,7 +103,7 @@ async function  onMessage({ data }) {
   // keep track of sequence for heartbeats
   if (packet.s) sequence = packet.s;
 
-  console.log(packet);
+  console.log(util.inspect(packet,true,99,true));
 
   // handle gateway ops
   switch (packet.op) {

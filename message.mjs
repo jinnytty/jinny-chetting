@@ -13,6 +13,9 @@ export function format(msg, maxLength) {
     if (l.startsWith('<t:')) {
       continue;
     }
+    if (l.startsWith('~ <t:')) {
+      continue;
+    }
 
     result =
       result + ' ' + l.replaceAll(smilieReg, '$1').replaceAll(timeReg, '');
